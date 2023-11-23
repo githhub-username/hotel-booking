@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Hotel booking</string>
+    <string name="get_location">Get Location</string>
+    <string name="search_by_city_and_features">Search by City and Features</string>
+    <string name="search_nearby_hotels">Search Nearby Hotels</string>
+    <string name="enter_features">Enter Features</string>
+    <string name="enter_city_name">Enter city Name</string>
+    <string name="eg_una">eg. Una</string>
+    <string name="eg_air_conditioner_etc">eg. Air Conditioner etc</string>
+    <string name="search_hotels">Search Hotels</string>
+    <string name="eg_air_conditioner_etc_optional">eg. air_conditioner_etc (Optional)</string>
+</resources>

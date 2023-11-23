@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".cityFeatureActivity">
+
+    <TextView
+        android:id="@+id/cityName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="160dp"
+        android:text="@string/enter_city_name"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/inputCityName"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/inputCityName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="60dp"
+        android:layout_marginStart="50dp"
+        android:ems="15"
+        android:hint="@string/eg_una"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/cityName" />
+
+    <TextView
+        android:id="@+id/feature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/enter_features"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/inputCityName"
+        app:layout_constraintTop_toBottomOf="@+id/inputCityName" />
+
+    <EditText
+        android:id="@+id/inputFeature"
+        android:hint="@string/eg_air_conditioner_etc_optional"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:ems="15"
+        app:layout_constraintStart_toStartOf="@+id/inputCityName"
+        app:layout_constraintTop_toBottomOf="@id/feature" />
+
+    <Button
+        android:id="@+id/buttonSearchHotel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/inputFeature"
+        android:text="@string/search_hotels"
+        android:textSize="20sp"
+
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
