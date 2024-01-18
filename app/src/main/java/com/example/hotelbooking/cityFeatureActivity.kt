@@ -22,18 +22,25 @@ class cityFeatureActivity : AppCompatActivity() {
 
         binding.buttonSearchHotel.setOnClickListener {
 
-            val str = binding.inputCityName.text.toString()
+            val city_name = binding.inputCityName.text.toString()
 
-            if(str.isEmpty()) {
+            if(city_name.isEmpty()) {
 
                 Toast.makeText(this, "Mandatary Fields must be filled", Toast.LENGTH_LONG).show()
             }
             else {
 
-                  val intent = Intent(this, recommendedHotelActivity::class.java)
-                  startActivity(intent)
+                val intent = Intent(this, recommendedHotelActivity::class.java)
+                intent.putExtra(recommendedPlaceActivity.CITYNAME, city_name)
+                startActivity(intent)
+
             }
 
+        }
+
+        binding.nearbySearchText.setOnClickListener {
+
+            startActivity(Intent(this, NearbyHotelActivity::class.java))
         }
     }
 }

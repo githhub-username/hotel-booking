@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/s"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/cardView"
@@ -23,14 +24,14 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:id="@+id/hotel_name"
+                android:id="@+id/place_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="8dp"
                 android:layout_marginTop="8dp"
                 android:ellipsize="end"
                 android:maxLines="2"
-                tools:text="Place name fhnnfhc "
+                tools:text="Placenrg fhnnfhc "
                 android:textColor="@color/black"
                 android:textSize="23sp"
                 android:textStyle="bold"
@@ -40,75 +41,71 @@
                 />
 
             <TextView
-                android:id="@+id/hotel_star_rating"
+                android:id="@+id/place_rating"
                 android:layout_width="match_parent"
-                android:layout_height="20dp"
+                android:layout_height="wrap_content"
                 android:layout_marginHorizontal="8dp"
-                android:layout_marginTop="2dp"
+                android:layout_marginTop="12dp"
                 tools:text="4.5"
                 android:textColor="@color/chocolate"
                 android:textSize="15sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/hotel_name" />
-
+                app:layout_constraintTop_toBottomOf="@id/place_name" />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="18dp"
-                app:layout_constraintStart_toEndOf="@id/hotel_star_rating"
-                app:layout_constraintTop_toTopOf="@id/hotel_star_rating"
-                app:layout_constraintBottom_toBottomOf="@id/hotel_star_rating"
+                app:layout_constraintStart_toEndOf="@id/place_rating"
+                app:layout_constraintTop_toTopOf="@id/place_rating"
+                app:layout_constraintBottom_toBottomOf="@id/place_rating"
                 android:src="@drawable/baseline_star_24"
                 android:layout_marginLeft="4dp"
                 app:tint="@color/chocolate" />
 
             <TextView
-                android:id="@+id/hotel_address"
+                android:id="@+id/place_distance"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="8dp"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="12dp"
+                tools:text="2.8 km"
+                android:textColor="@color/orange"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/place_name" />
+
+
+            <TextView
+                android:id="@+id/place_cityname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginTop="15dp"
                 android:ellipsize="end"
                 android:maxLines="2"
-                tools:text="Address bfnfn fgnxfnhc fhnnfhc "
+                tools:text="City name"
                 android:textColor="@color/black"
                 android:textSize="15sp"
                 app:layout_constraintStart_toStartOf="parent"
 
-                app:layout_constraintTop_toBottomOf="@id/hotel_star_rating"
+                app:layout_constraintTop_toBottomOf="@id/place_rating"
 
                 />
 
             <TextView
-                android:id="@+id/text"
+                android:id="@+id/place_desc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="8dp"
-                app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginTop="10dp"
-                android:text="For more.."
-                android:textSize="18dp"
-                android:textStyle="bold"
-                app:layout_constraintTop_toBottomOf="@id/hotel_address" />
-
-
-            <TextView
-                android:id="@+id/hotel_url"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="8dp"
-                android:layout_marginTop="4dp"
+                android:layout_marginVertical="15dp"
                 android:ellipsize="end"
                 android:maxLines="2"
-                tools:text="@string/underlined_text"
-                android:textColor="@color/blue"
-                android:textSize="16sp"
-                android:textStyle="italic"
-                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="Address bfn dfgg fdf,jjg gwmew gwe gg g  g g g ff ffff nztshdthndrfndfnddf nx gfjhnf fnh fnhf nfg fg  f gfbg dfgnrgnfn fgnxfnhc fhnnfhc "
+                android:textColor="@color/black"
+                android:textSize="15sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/text"
-
-                />
+                app:layout_constraintTop_toBottomOf="@id/place_cityname"
+                 />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

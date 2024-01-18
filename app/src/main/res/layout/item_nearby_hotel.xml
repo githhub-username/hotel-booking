@@ -30,7 +30,7 @@
                 android:layout_marginTop="8dp"
                 android:ellipsize="end"
                 android:maxLines="2"
-                tools:text="Place name fhnnfhc "
+                tools:text="Place name gnfn  fhnnfhc "
                 android:textColor="@color/black"
                 android:textSize="23sp"
                 android:textStyle="bold"
@@ -42,7 +42,7 @@
             <TextView
                 android:id="@+id/hotel_star_rating"
                 android:layout_width="match_parent"
-                android:layout_height="20dp"
+                android:layout_height="wrap_content"
                 android:layout_marginHorizontal="8dp"
                 android:layout_marginTop="2dp"
                 tools:text="4.5"
@@ -50,7 +50,6 @@
                 android:textSize="15sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/hotel_name" />
-
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -70,7 +69,7 @@
                 android:layout_marginTop="4dp"
                 android:ellipsize="end"
                 android:maxLines="2"
-                tools:text="Address bfnfn fgnxfnhc fhnnfhc "
+                tools:text="Address bfn dnztshdthndrfndfnddf nx gfjhnf fnh fnhf nfg fg  f gfbg dfgnrgnfn fgnxfnhc fhnnfhc "
                 android:textColor="@color/black"
                 android:textSize="15sp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -93,6 +92,19 @@
 
 
             <TextView
+                android:id="@+id/hotel_distance"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginTop="8dp"
+                android:text="2.345 K.m."
+                android:textSize="18dp"
+                android:textAlignment="viewEnd"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/text"
+                app:layout_constraintTop_toBottomOf="@id/hotel_address" />
+
+            <TextView
                 android:id="@+id/hotel_url"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -104,7 +116,6 @@
                 android:textColor="@color/blue"
                 android:textSize="16sp"
                 android:textStyle="italic"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/text"
 

@@ -7,16 +7,17 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.browser.customtabs.CustomTabsIntent
 import androidx.recyclerview.widget.RecyclerView
-import com.example.hotelbooking.databinding.ItemHotelBinding
+import com.example.hotelbooking.databinding.ItemNearbyHotelBinding
 
-class HotelListAdapter(private var list: ArrayList<HotelModel>, var context: Context): RecyclerView.Adapter<HotelListAdapter.HotelViewHolder>() {
-    class HotelViewHolder (var binding: ItemHotelBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(model: HotelModel, context: Context) {
+class NearbyHotelListAdapter(private var list: ArrayList<NearbyHotelModel>, var context: Context): RecyclerView.Adapter<NearbyHotelListAdapter.HotelViewHolder>() {
+    class HotelViewHolder (var binding: ItemNearbyHotelBinding) : RecyclerView.ViewHolder(binding.root) {
+        fun bind(model: NearbyHotelModel, context: Context) {
             binding.apply {
                 hotelName.text = model.property_name
                 hotelAddress.text = model.address
                 hotelStarRating.text = model.hotel_star_rating
                 hotelUrl.text = model.pageurl
+                hotelDistance.text = model.hotel_distance + " km"
 
                 hotelUrl.setOnClickListener {
                     val builder = CustomTabsIntent.Builder()
@@ -26,10 +27,11 @@ class HotelListAdapter(private var list: ArrayList<HotelModel>, var context: Con
                 }
 
                 root.setOnClickListener {
-                    val intent = Intent(root.context, HotelDetailsActivity::class.java)
+                    val intent = Intent(root.context, NearbyHotelDetails::class.java)
 
                     NearbyHotelDetails.hotel_name = model.property_name
                     NearbyHotelDetails.hotel_star_rating = model.hotel_star_rating
+                    NearbyHotelDetails.hotel_distance = model.hotel_distance
                     NearbyHotelDetails.hotel_description = model.hotel_description
                     NearbyHotelDetails.hotel_url = model.pageurl
                     NearbyHotelDetails.hotel_address = model.address
@@ -41,7 +43,7 @@ class HotelListAdapter(private var list: ArrayList<HotelModel>, var context: Con
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HotelViewHolder {
 
-        return HotelViewHolder(ItemHotelBinding.inflate(LayoutInflater.from(context), parent, false))
+        return HotelViewHolder(ItemNearbyHotelBinding.inflate(LayoutInflater.from(context), parent, false))
     }
 
     override fun getItemCount(): Int {
@@ -53,17 +55,12 @@ class HotelListAdapter(private var list: ArrayList<HotelModel>, var context: Con
         holder.bind(list[position], context)
     }
 
-    fun updatehotels(hotelArray: ArrayList<HotelModel>) {
+    fun update_nearby_hotels(nearbyHotelarray: ArrayList<NearbyHotelModel>) {
         list.clear()
-        list.addAll(hotelArray)
+        list.addAll(nearbyHotelarray)
 
         notifyDataSetChanged()
     }
 
 
 }
-
-//class HotelViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-
-//    val titleView: TextView = itemView.findViewById(R.id.title)
-//}

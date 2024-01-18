@@ -5,7 +5,8 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
         android:maxSdkVersion="32" />
 
     <application
@@ -19,6 +20,33 @@
         android:theme="@style/Theme.HotelBooking"
         tools:targetApi="31">
         <activity
+            android:name=".PlaceDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".recommendedPlaceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NearbyHotelDetails"
+            android:exported="false" />
+        <activity
+            android:name=".HotelDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HotelArticleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NearbyHotelActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SplashScreenActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".recommendedHotelActivity"
             android:exported="false" />
         <activity
@@ -26,22 +54,10 @@
             android:exported="false" />
         <activity
             android:name=".SelectSearchActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="true" />
     </application>
 
 </manifest>

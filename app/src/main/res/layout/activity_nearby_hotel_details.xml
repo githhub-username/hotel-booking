@@ -12,10 +12,8 @@
         android:layout_margin="10dp"
         app:cardBackgroundColor="@color/grey"
         app:cardElevation="3dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.5"
-        tools:layout_editor_absoluteX="10dp">
+        >
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraint_layout"
@@ -28,51 +26,49 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="8dp"
                 android:layout_marginTop="8dp"
-                android:ellipsize="end"
-                android:maxLines="2"
-                tools:text="Place name fhnnfhc "
+                tools:text="Hotel name hnnfhc "
                 android:textColor="@color/black"
-                android:textSize="23sp"
+                android:textSize="30sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@id/constraint_layout"
 
-                />
+                app:layout_constraintTop_toTopOf="@id/constraint_layout" />
 
             <TextView
                 android:id="@+id/hotel_star_rating"
                 android:layout_width="match_parent"
-                android:layout_height="20dp"
+                android:layout_height="wrap_content"
                 android:layout_marginHorizontal="8dp"
-                android:layout_marginTop="2dp"
+                android:layout_marginTop="15dp"
                 tools:text="4.5"
                 android:textColor="@color/chocolate"
-                android:textSize="15sp"
+                android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/hotel_name" />
 
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="18dp"
-                app:layout_constraintStart_toEndOf="@id/hotel_star_rating"
-                app:layout_constraintTop_toTopOf="@id/hotel_star_rating"
-                app:layout_constraintBottom_toBottomOf="@id/hotel_star_rating"
-                android:src="@drawable/baseline_star_24"
-                android:layout_marginLeft="4dp"
-                app:tint="@color/chocolate" />
+            <TextView
+                android:id="@+id/hotel_distance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginTop="15dp"
+                tools:text="4.7 Km"
+                android:textColor="@color/chocolate"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/hotel_name" />
 
             <TextView
                 android:id="@+id/hotel_address"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="8dp"
-                android:layout_marginTop="4dp"
-                android:ellipsize="end"
-                android:maxLines="2"
-                tools:text="Address bfnfn fgnxfnhc fhnnfhc "
+                android:layout_marginTop="15dp"
+                tools:text="Address bfn dnztshdthndrfndfnddf nx gfjhnf fnh fnhf nfg fg  f gfbg dfgnrgnfn fgnxfnhc fhnnfhc "
                 android:textColor="@color/black"
-                android:textSize="15sp"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
 
                 app:layout_constraintTop_toBottomOf="@id/hotel_star_rating"
@@ -85,28 +81,37 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="8dp"
                 app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginTop="10dp"
-                android:text="For more.."
-                android:textSize="18dp"
+                android:layout_marginTop="30dp"
+                android:text="About .. "
+                android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintTop_toBottomOf="@id/hotel_address" />
 
+            <TextView
+                android:id="@+id/hotel_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="20dp"
+                tools:text="Asdfrfd et ebtk.tbkb.k btb tbtdmbtmtekbtbtmtb t tb n ynnyddydyn yb yd yndyndyndy ynd ynd ynd ynd nydynd yndyndynd yndynd yyndyd yndy ydn yndynd ydn ydn yn yn yn ynd yn y y yyndnyyn ynd ynd ynd ynd  ynd  ynd ynd ynd yd yndynd ynd  y ydn yndyndddd yn ynd ynddddd  nyd yn  yndaerg ege r regregreywtwegz ge dht tehhtexh hxtt ht htr"
+                android:textSize="15sp"
+                android:lineSpacingExtra="2dp"
+                app:layout_constraintTop_toBottomOf="@id/text" />
 
             <TextView
                 android:id="@+id/hotel_url"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="8dp"
-                android:layout_marginTop="4dp"
-                android:ellipsize="end"
-                android:maxLines="2"
+                android:layout_marginTop="18dp"
                 tools:text="@string/underlined_text"
                 android:textColor="@color/blue"
                 android:textSize="16sp"
                 android:textStyle="italic"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/text"
+                app:layout_constraintTop_toBottomOf="@id/hotel_description"
 
                 />
 

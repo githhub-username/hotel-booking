@@ -9,4 +9,7 @@
     <string name="eg_air_conditioner_etc">eg. Air Conditioner etc</string>
     <string name="search_hotels">Search Hotels</string>
     <string name="eg_air_conditioner_etc_optional">eg. air_conditioner_etc (Optional)</string>
+    <string name="find_hotels">Find Hotels</string>
+    <string name="search_places">Search Places</string>
+    <string name="underlined_text">https://www.goibibo.com/hotels/woodchime-homes</string>
 </resources>
